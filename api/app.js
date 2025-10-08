@@ -66,11 +66,11 @@ const port = process.env.PORT || 5000;
 const start = async () => {
   try {
     await connectDB(process.env.CONNECT_URL);
-    if (process.env.NODE_ENV !== "production") {
+    // if (process.env.NODE_ENV !== "production") {
       app.listen(port, "0.0.0.0", () =>
         console.log(`Server is listening on port ${port}...`)
       );
-    }
+    // }
   } catch (error) {
     console.log(error);
   }
